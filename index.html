@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b18">
+  <meta name="description" content="Prashant Latta Books — a digital archive for ideas, stories, and knowledge.">
+  <title>Prashant Latta Books — Digital Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="status-dot"></span> AN INDEPENDENT DIGITAL LIBRARY <span class="announcement-sep">·</span> IDEAS THAT STAY WITH YOU</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Prashant Latta Books home">
+      <span class="brand-mark">PL<span>✳</span></span>
+      <span class="brand-copy"><strong>PRASHANT LATTA</strong><small>BOOKS · DIGITAL ARCHIVE</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#library">Library</a><a href="#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-focus" aria-label="Focus search">⌕</button><button class="icon-button theme-toggle" id="theme-toggle" aria-label="Toggle dark and light theme" title="Toggle theme">☾</button>
+      <button class="button button-dark button-small" id="admin-open">Admin ↗</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE PERSONAL LIBRARY OF PRASHANT LATTA</div>
+        <h1>Some ideas deserve<br>to <em>stay with you.</em></h1>
+        <p class="hero-description">A considered collection of books on decisions, identity, history, science, and the questions that shape the way we live.</p>
+        <div class="hero-buttons"><a class="button button-gold" href="#library">Explore the library <span>↘</span></a><a class="text-link" href="#about">Meet the author <span>→</span></a></div>
+        <div class="hero-proof"><div class="proof-avatars"><span>PL</span><span>✦</span><span>∞</span></div><span>Written with curiosity.<br><strong>Shared for thoughtful reading.</strong></span></div>
+      </div>
+      <div class="hero-art" aria-label="Editorial book illustration">
+        <div class="art-glow"></div><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+        <div class="floating-note note-top">A LIBRARY OF IDEAS <span>01 — ∞</span></div>
+        <div class="book-stack">
+          <div class="book book-back"><div class="book-spine"></div><div class="book-back-title">THE ART OF<br>SEEING CLEARLY</div><div class="book-back-mark">PL</div></div>
+          <div class="book book-main"><div class="book-topline">PRASHANT LATTA <span>✳</span></div><div class="book-symbol">◉</div><div class="book-main-title">DECISIONS<br><i>UNDER</i><br>PRESSURE</div><div class="book-subtitle">RISK · POWER · HUMAN NATURE</div><div class="book-author">PRASHANT LATTA</div></div>
+          <div class="book book-front"><div class="book-front-line"></div><div class="book-front-title">BEYOND<br>THE CROWD</div><div class="book-front-author">NOTES ON IDENTITY</div></div>
+        </div>
+        <div class="floating-note note-bottom">READ SLOWLY. THINK DEEPLY. <span>✦</span></div>
+        <div class="hero-stamp">EST.<br><b>2026</b></div>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div><strong id="stat-books">—</strong><span>BOOKS IN THE ARCHIVE</span></div>
+      <div><strong>01</strong><span>CURIOUS MIND</span></div>
+      <div><strong>∞</strong><span>WAYS TO THINK</span></div>
+      <div class="metrics-note">A quiet corner for<br><em>the curious reader.</em></div>
+    </section>
+
+    <section class="library-section section-wrap" id="library">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE COLLECTION</div><h2>Explore the <em>library.</em></h2></div>
+        <p>Find a thought worth carrying.<br>Stay for the next one.</p>
+      </div>
+      <div class="library-controls">
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search by title, author, or topic…" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <select id="category-filter" aria-label="Filter by category"><option value="all">All topics</option></select>
+        <select id="language-filter" aria-label="Filter by language"><option value="all">All languages</option></select>
+      </div>
+      <div id="library-grid" class="book-grid" aria-live="polite">
+        <div class="loading-card"><span class="loader"></span><p>Preparing the library…</p></div>
+      </div>
+      <div id="empty-state" class="empty-state hidden"><span>✳</span><h3>No books found</h3><p>Try a different search or check back soon.</p><button class="button button-outline" id="clear-filters">Clear filters</button></div>
+      <div class="library-foot"><span><i></i> A GROWING COLLECTION</span><span id="results-count">Loading collection…</span></div>
+    </section>
+
+    <section class="quote-band"><div class="quote-mark">“</div><blockquote>A book is not just something you finish.<br>It is something that <em>changes what you notice.</em></blockquote><div class="quote-rule"></div><span>THE READER'S NOTEBOOK</span></section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-symbol"><div class="about-monogram">PL</div><span>AUTHOR · READER · OBSERVER</span></div>
+      <div class="about-copy"><div class="eyebrow"><span class="eyebrow-line"></span> A NOTE FROM THE AUTHOR</div><h2>Ideas, collected.<br><em>Thoughts, shared.</em></h2><p>Welcome to my digital bookshelf — a home for work shaped by curiosity, observation, and a desire to understand the world a little more deeply. These pages explore human decisions, identity, history, science, and the stories behind what we believe.</p><p>Thank you for being here. Read at your own pace, and take a thought with you.</p><div class="signature">Prashant Latta <span>✳</span></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">PL<span>✳</span></span><span class="brand-copy"><strong>PRASHANT LATTA</strong><small>BOOKS · DIGITAL ARCHIVE</small></span></a><span>© <span id="year"></span> PRASHANT LATTA. MADE FOR THE CURIOUS.</span><a href="#home">BACK TO TOP ↑</a></footer>
+
+  <div class="modal-backdrop hidden" id="book-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <article class="reader-modal"><button class="modal-close" data-close="book-modal" aria-label="Close reader">×</button><div class="reader-meta"><span id="reader-category">BOOK</span><span id="reader-language">LANGUAGE</span></div><h2 id="modal-title">Book title</h2><p class="reader-byline" id="reader-byline"></p><div class="reader-rule"></div><div id="reader-content" class="reader-content"></div><section class="rating-panel"><h3>Rate this book</h3><div id="rating-stars" class="rating-stars" role="group" aria-label="Rate this book from 1 to 5 stars"><button data-rating="1" aria-label="1 star">☆</button><button data-rating="2" aria-label="2 stars">☆</button><button data-rating="3" aria-label="3 stars">☆</button><button data-rating="4" aria-label="4 stars">☆</button><button data-rating="5" aria-label="5 stars">☆</button></div><p id="rating-summary">Be the first to rate this book.</p></section><div class="reader-footer">PRASHANT LATTA BOOKS <span>·</span> FOR PERSONAL READING</div></article>
+  </div>
+
+  <div class="modal-backdrop hidden" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+    <section class="admin-modal"><button class="modal-close" data-close="admin-modal" aria-label="Close admin">×</button>
+      <div class="admin-brand"><span class="brand-mark">PL<span>✳</span></span><span>PRIVATE WORKSPACE</span></div>
+      <div id="admin-login-view">
+        <div class="eyebrow"><span class="eyebrow-line"></span> OWNER ACCESS</div><h2 id="admin-title">Welcome <em>back.</em></h2><p class="muted">Sign in to manage your digital archive.</p>
+        <form id="login-form" class="form-stack"><label>Email address<input id="admin-email" type="email" required autocomplete="username" placeholder="you@example.com"></label><label>Password<input id="admin-password" type="password" required autocomplete="current-password" placeholder="Your password"></label><button class="button button-dark full-button" type="submit">Sign in securely <span>→</span></button><p class="form-message" id="login-message" role="status"></p></form>
+        <div class="admin-hint"><strong>First time here?</strong><br>Set up Supabase and your owner account using the included README. Public sign-up is intentionally disabled.</div>
+      </div>
+      <div id="admin-dashboard-view" class="hidden">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR WORKSPACE</div><h2>Library <em>manager.</em></h2><p class="muted" id="admin-welcome"></p>
+        <div class="dashboard-toolbar"><button class="button button-gold" id="new-book-button">＋ Add a book</button><button class="button button-outline" id="logout-button">Log out</button></div>
+        <details class="site-customizer" id="site-customizer"><summary>Website customization · Theme, homepage & author</summary>
+          <form id="site-settings-form" class="form-stack">
+            <div class="form-section-title">BRAND & THEME</div>
+            <div class="form-row"><label>Olive color<input id="setting-olive" type="color" value="#344b3b"></label><label>Burgundy color<input id="setting-burgundy" type="color" value="#6d263d"></label></div>
+            <label>Homepage title<input id="setting-title" maxlength="120" value="A library of ideas, stories & decisions"></label>
+            <label>Homepage subtitle<textarea id="setting-subtitle" rows="2" maxlength="400"></textarea></label>
+            <div class="form-section-title">AUTHOR PROFILE</div>
+            <label>Author name<input id="setting-author" maxlength="120" value="Prashant Latta"></label>
+            <label>Author bio<textarea id="setting-bio" rows="4" maxlength="2000"></textarea></label>
+            <label>Author photo URL<input id="setting-author-photo" type="url" placeholder="https://…"></label>
+            <label>Default language<select id="setting-language"><option>English</option><option>Hindi</option><option>Gujarati</option><option>Bengali</option><option>Russian</option></select></label>
+            <button class="button button-dark" type="submit">Save website settings</button><p class="form-message" id="settings-message" role="status"></p>
+          </form>
+        </details>
+        <form id="book-form" class="form-stack hidden">
+          <input id="book-id" type="hidden">
+          <div class="form-section-title">BOOK DETAILS</div>
+          <label>Book title<input id="book-title" required maxlength="160" placeholder="Enter the book title"></label>
+          <div class="form-row"><label>Author<input id="book-author" required maxlength="120" value="Prashant Latta"></label><label>Category<input id="book-category" maxlength="80" placeholder="Essays, Science…"></label></div>
+          <div class="form-row"><label>Language<input id="book-language" maxlength="40" value="English"></label><label>Cover image URL (optional)<input id="book-cover" type="url" placeholder="https://…"></label></div>
+          <label>Upload cover image (optional)<input id="book-cover-file" type="file" accept="image/jpeg,image/png,image/webp,image/avif"><span class="label-note">JPG, PNG, WebP or AVIF · max 5 MB</span></label>
+          <label>Upload book file (PDF or DOCX)<input id="book-file" type="file" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><span class="label-note">PDF/DOCX · max 25 MB. Upload a new file only when adding/replacing the book file.</span></label>
+          <p class="form-message" id="file-status" role="status"></p>
+          <label>Short description<textarea id="book-description" rows="2" maxlength="500" placeholder="A short introduction…"></textarea></label>
+          <label>Online reading content <span class="label-note">Optional introduction or fallback text. Uploaded PDF/DOCX files can be read online.</span><textarea id="book-content" rows="8" placeholder="Optional introduction or reading text…"></textarea></label>
+          <label class="checkbox-row"><input type="checkbox" id="book-published"> Publish publicly now</label>
+          <div class="form-row"><button class="button button-dark" type="submit">Save book</button><button class="button button-outline" type="button" id="cancel-book">Cancel</button></div>
+          <p class="form-message" id="book-message" role="status"></p>
+        </form>
+        <div class="admin-list-heading"><span>YOUR BOOKS</span><span id="admin-book-count">0 books</span></div><div id="admin-book-list" class="admin-book-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script>
+    (() => {
+      const targets = '.hero,.metrics,.library-section,.quote-band,.about-section,.site-footer';
+      const reveal = () => {
+        document.querySelectorAll(targets).forEach(el => el.classList.add('js-reveal'));
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+        }), {threshold: 0.12, rootMargin: '0px 0px -35px 0px'});
+        document.querySelectorAll('.js-reveal').forEach(el => observer.observe(el));
+        const grid = document.getElementById('library-grid');
+        if (grid) new MutationObserver(() => grid.querySelectorAll('.book-card:not(.js-reveal)').forEach(card => {card.classList.add('js-reveal'); observer.observe(card);})).observe(grid,{childList:true});
+      };
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', reveal); else reveal();
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.com/mammoth@1.9.0/mammoth.browser.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
